@@ -18,7 +18,7 @@
             let marks = Number(value);
             let result = document.getElementById("result");
 
-            if (value === "" || !Number.isInteger(marks) ||marks < 0 || marks >= 10) {
+            if (value === "" || !Number.isInteger(marks) ||marks < 0 || marks > 9) {
                 result.innerText = "Invalid Marks";
             } else {
                 result.innerText = "Valid Marks";
