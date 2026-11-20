@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Marks Validator</title>
+</head>
+<body>
+    <h2>Quiz Marks Validator</h2>
+
+    <label>Enter Quiz Marks (0-10):</label>
+    <input type="number" id="marks">
+    <button id="validateBtn" onclick="validateMarks()">Validate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function validateMarks() {
+            let value = document.getElementById("marks").value;
+            let marks = Number(value);
+            let result = document.getElementById("result");
+
+            if (value === "" || !Number.isInteger(marks) ||marks < 0 || marks >= 10) {
+                result.innerText = "Invalid Marks";
+            } else {
+                result.innerText = "Valid Marks";
+            }
+        }
+    </script>
+</body>
+</html>
